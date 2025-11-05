@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: 30 144 255;
+}
+
+/* Subtle background texture */
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(2,6,23,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2,6,23,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Fancy underline */
+.underline-fx {
+  background-image: linear-gradient(120deg, rgba(30,144,255,0.35), rgba(30,144,255,0.15));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+}
+
+/* Pill button focus ring */
+.btn-ring:focus-visible {
+  box-shadow: 0 0 0 6px rgba(30,144,255,0.15);
+}
+
+/* Section card */
+.card {
+  @apply rounded-2xl border border-slate-200/60 bg-white/80 backdrop-blur shadow-sm;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(90deg, #155bb0, #1e90ff, #47b2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
